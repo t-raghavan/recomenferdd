@@ -6,11 +6,10 @@ Created on Tue Jun 15 23:05:08 2021
 """
 
 import pandas as pd
-import matplotlib.pyplot as plt
 import pickle
 
 # Import Feature Engineered Sales Transaction file
-sales_df = pd.read_csv('D:\\sasi\\Metric Bees\\Dataset\\Amazon\\amazon.csv')
+sales_df = pd.read_csv('D:\\sasi\\Metric Bees\\Recommendation system\\Dataset\\Amazon\\amazon.csv')
 
 
 #Items a Customer purchased the most
@@ -87,55 +86,6 @@ cust_prod_rankings_df = cust_prod_rankings_df[['user_id','product_name','price',
 #cust_prod_rankings_df.sort_values('Popularity_Rank',ascending=True).head(20)
 
 
-cust_prod_rankings_df.to_csv('D:\\sasi\\Metric Bees\\Dataset\\Amazon\\Customer-Product-Rankings.csv',index=False)
+cust_prod_rankings_df.to_csv('D:\\sasi\\Metric Bees\\Recommendation system\\Dataset\\Amazon\\Customer-Product-Rankings.csv',index=False)
 
 pickle.dump(cust_prod_rankings_df, open('cust_prod_ranking_model.pkl','wb'))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
