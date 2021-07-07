@@ -9,7 +9,7 @@ import pandas as pd
 import pickle
 
 # Import Feature Engineered Sales Transaction file
-sales_df = pd.read_csv('D:\\sasi\\Metric Bees\\Dataset\\Amazon\\amazon.csv')
+sales_df = pd.read_csv('D:\\sasi\\Metric Bees\\Recommendation system\\Dataset\\Amazon\\amazon.csv')
 
 #Build Correlation Matrix for the Customer-Product relations (using User-User based recommendation
 # Find the total qty purchased by each customer of each product
@@ -42,87 +42,7 @@ cust_correlation_df = prod_cust_pivot_df.corr(method='spearman',min_periods=5)
 #cust_correlation_df
 
 
-cust_correlation_df.to_csv('D:\\sasi\\Metric Bees\\Dataset\\Amazon\\Customer-Customer-Correlation-Matrix.csv')
+cust_correlation_df.to_csv('D:\\sasi\\Metric Bees\\Recommendation system\\Dataset\\Amazon\\Customer-Customer-Correlation-Matrix.csv')
 
 
 pickle.dump(cust_correlation_df, open('cust_correlation_model.pkl','wb'))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
