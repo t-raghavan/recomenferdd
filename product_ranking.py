@@ -6,11 +6,10 @@ Created on Tue Jun 15 23:04:47 2021
 """
 
 import pandas as pd
-import matplotlib.pyplot as plt
 import pickle
 
 # Import Feature Engineered Sales Transaction file
-sales_df = pd.read_csv('D:\\sasi\\Metric Bees\\Dataset\\Amazon\\amazon.csv')
+sales_df = pd.read_csv('D:\\sasi\\Metric Bees\\Recommendation system\\Dataset\\Amazon\\amazon.csv')
 
 #Top Selling Items
 # Find the no of units sold of each product
@@ -82,42 +81,6 @@ product_rankings_df = product_rankings_df[['product_name','price','Top_Sell_Rank
 # List the Product Rankings
 #product_rankings_df.sort_values('Popular
 
-product_rankings_df.to_csv('D:\\sasi\\Metric Bees\\Dataset\\Amazon\\Product-Rankings.csv',index=False)
+product_rankings_df.to_csv('D:\\sasi\\Metric Bees\\Recommendation system\\Dataset\\Amazon\\Product-Rankings.csv',index=False)
 
 pickle.dump(product_rankings_df, open('prod_ranking_model.pkl','wb'))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
